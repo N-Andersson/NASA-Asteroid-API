@@ -10,6 +10,6 @@ This project is currently under development and some functionallity is still to 
  
 - Scaling or "zooming" in the canvas must be done manually through: 
 
-    `let sizeRel = 2000;`
+    `let sizeRel = 2000;` try with 10000 or 100000
 
 - The project will show more information about each asteroid when the mouse hovers over it
