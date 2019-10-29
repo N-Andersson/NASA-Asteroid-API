@@ -21,7 +21,7 @@ class Asteroid {
     stroke(255);
     strokeWeight(1);  
     fill(255);
-    ellipse(width / 2 + this.x, width / 2 + this.y, this.diameter, this.diameter);
+    ellipse(width / 2 + this.x, height / 2 + this.y, this.diameter, this.diameter);
 
 
 
@@ -44,7 +44,7 @@ class Asteroid {
   }
 
     push();
-    translate(height/2, width/2)
+    translate(width/2, height/2)
     for( var i = 0; i < this.history.length; i++){
       var pos = this.history[i];
       fill(255, 100/i)
@@ -53,4 +53,16 @@ class Asteroid {
     } 
     pop();
   }
+
+/*   distCheck(){
+    push();
+    translate(height/2, width/2)
+    var d = dist(mouseX, mouseY, this.x, this.y)
+    while(d < (this.diameter+500)){
+      this.velocity = 0;
+    }
+    this.velocity = this.velocity;
+    pop();
+  } */
+
 }

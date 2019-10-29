@@ -1,6 +1,7 @@
 
-const width = 750;
-const height = 750;
+
+const width = window.innerWidth;
+const height = window.innerHeight;  
 
 let asteroids;
 let asteroidArray = [];
@@ -25,7 +26,7 @@ function setup() {
   createCanvas(width, height);
   dayDate = findDate();
 
-  moon = new Asteroid((384400 / 200000) + 20, 1 / 10, 3474 / 1000)
+  moon = new Asteroid((384400 / 200000) + 20, 1 / 10, 3474 / 1000);
 
   distanceArr = []
   for (let i = 0; i < asteroids.element_count; i++) {
@@ -52,11 +53,14 @@ function draw() {
   background(150);
   noStroke();
   fill(65, 105, 225);
-  ellipse(width / 2, width / 2, 20, 20)
+  ellipse(width / 2, height / 2, 20, 20)
+
 
   for (let j = 0; j < asteroids.element_count; j++) {
     asteroidArray[j].show();
     asteroidArray[j].update();
+
+
   }
   moon.show();
   moon.update();
